@@ -18,6 +18,7 @@ root = '/mojs-website/'
 
 routes = (
   <Route     name="app" path="#{root}" handler={App}>
+    <Route   path="/mojs-website/"   handler={Main}/>
     <Route   name="main"            handler={Main}/>
     <Route   name="tutorials"       handler={Tutorials}>
       <Route name="#{root}tutorials/burst/" handler={Burst} />
