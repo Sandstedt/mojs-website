@@ -13,7 +13,8 @@ PathEasing     = require './pages/tutorials/easing/path-easing/path-easing.cjsx'
 Shape          = require('./pages/tutorials/shape.babel.jsx').default;
 Burst          = require('./pages/tutorials/burst.babel.jsx').default;
 
-root = if 0 then '/mojs-website/' else '/'
+# root = if 0 then '/mojs-website/' else '/'
+root = '/mojs-website/'
 
 routes = (
   <Route     name="app" path="#{root}" handler={App}>
