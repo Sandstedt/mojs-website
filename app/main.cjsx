@@ -2,6 +2,7 @@ React  = require 'react'
 Router = require 'react-router'
 DefaultRoute      = Router.DefaultRoute
 Route             = Router.Route
+NotFoundRoute     = Router.NotFoundRoute
 React.initializeTouchEvents(true)
 
 App            = require './app'
@@ -18,7 +19,6 @@ root = '/mojs-website/'
 
 routes = (
   <Route     name="app" path="#{root}" handler={App}>
-    <Route   path="/mojs-website/"   handler={Main}/>
     <Route   name="main"            handler={Main}/>
     <Route   name="tutorials"       handler={Tutorials}>
       <Route name="#{root}tutorials/burst/" handler={Burst} />
@@ -29,6 +29,7 @@ routes = (
     </Route>
     <DefaultRoute handler={Main}/>
   </Route>
+  <NotFoundRoute handler={Main}/>
 )
 
 Router.run routes, Router.HistoryLocation, (Handler)->
